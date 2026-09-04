@@ -3,36 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brissia Lozano | Information Systems Student</title>
-  <!-- Bootstrap 5 CSS Framework -->
+  <title>Brissia Lozano | Information Systems Portfolio</title>
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
-    /* Custom Styling for Theme and Typography */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2b2d42;
       background-color: #f8f9fa;
-      color: #212529;
     }
-    .hero-header {
-      background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    .hero-section {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
       color: #ffffff;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem;
     }
-    .card-title {
-      color: #0d6efd;
+    .section-title {
+      font-weight: 700;
+      color: #1e3c72;
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
-    footer {
-      background-color: #212529;
-      color: #adb5bd;
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 50px;
+      background-color: #2a5298;
+    }
+    .card-project {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+    }
+    .card-project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+    .skill-badge {
+      font-size: 0.95rem;
+      padding: 0.6em 0.9em;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Part 6: Navigation Menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">My Portfolio</a>
+      <a class="navbar-brand fw-bold" href="#">Brissia Lozano</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,91 +71,98 @@
     </div>
   </nav>
 
-  <!-- Part 5: Header -->
-  <header class="hero-header text-center">
+  <!-- Hero / Header Section -->
+  <header class="hero-section text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold">Brissia Lozano</h1>
-      <p class="fs-4 mb-1">Information Systems Student</p>
-      <p class="fs-6 text-white-50">University of Utah</p>
+      <h1 class="display-3 fw-bold">Brissia Lozano</h1>
+      <p class="fs-4 mb-2">Information Systems Student</p>
+      <p class="fs-6 text-white-50"><i class="bi bi-geo-alt-fill me-1"></i>University of Utah</p>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="container my-5">
-    
-    <!-- Part 5: About Me -->
+
+    <!-- About Me Section -->
     <section id="about" class="mb-5 py-3">
-      <h2 class="border-bottom pb-2 mb-3">About Me</h2>
-      <p class="lh-lg fs-5">
-        I am an Information Systems student at the University of Utah with a strong interest in leveraging data analytics and enterprise software to solve complex business problems. Throughout my academic program, I have developed foundational skills in programming, database design, and systems architecture. My primary technical interests focus on business intelligence, software automation, and practical applications of generative AI. I aim to build a career where I can bridge the gap between technical teams and business stakeholders to improve processes and drive data-informed decision-making.
+      <h2 class="section-title">About Me</h2>
+      <p class="fs-5 lh-base">
+        I am an Information Systems student at the University of Utah focused on understanding how technology drives business efficiency and communication. My academic journey centers on data management, digital organization, and modern software tools. I enjoy working with core productivity tools like Microsoft Excel and PowerPoint to organize data and present insights clearly, while continually building my skills in web development and systems management.
       </p>
     </section>
 
-    <!-- Part 5: Skills -->
+    <!-- Skills Section -->
     <section id="skills" class="mb-5 py-3">
-      <h2 class="border-bottom pb-2 mb-3">Skills</h2>
+      <h2 class="section-title">Skills & Software</h2>
       <div class="d-flex flex-wrap gap-2">
-        <span class="badge bg-primary fs-6">HTML</span>
-        <span class="badge bg-primary fs-6">CSS</span>
-        <span class="badge bg-primary fs-6">JavaScript</span>
-        <span class="badge bg-primary fs-6">Python</span>
-        <span class="badge bg-primary fs-6">SQL</span>
-        <span class="badge bg-primary fs-6">Git</span>
-        <span class="badge bg-primary fs-6">GitHub</span>
-        <span class="badge bg-primary fs-6">Microsoft Excel</span>
-        <span class="badge bg-primary fs-6">Data Analytics</span>
-        <span class="badge bg-primary fs-6">AI Prompt Engineering</span>
+        <span class="badge bg-primary skill-badge"><i class="bi bi-file-earmark-excel me-1"></i> Microsoft Excel</span>
+        <span class="badge bg-primary skill-badge"><i class="bi bi-file-earmark-slides me-1"></i> Microsoft PowerPoint</span>
+        <span class="badge bg-secondary skill-badge">HTML5 & CSS3</span>
+        <span class="badge bg-secondary skill-badge">Bootstrap 5</span>
+        <span class="badge bg-secondary skill-badge">Git & GitHub</span>
+        <span class="badge bg-secondary skill-badge">GitHub Pages</span>
+        <span class="badge bg-info text-dark skill-badge">AI Prompt Engineering</span>
+        <span class="badge bg-info text-dark skill-badge">Data Presentation</span>
       </div>
     </section>
 
-    <!-- Part 5 & 6: Responsive Projects Grid -->
+    <!-- Projects Section -->
     <section id="projects" class="mb-5 py-3">
-      <h2 class="border-bottom pb-2 mb-4">Projects</h2>
+      <h2 class="section-title">Featured Work</h2>
       <div class="row g-4">
-        
+
+        <!-- Project Card 1 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-sm card-project">
             <div class="card-body">
-              <h5 class="card-title">AI Business Analysis</h5>
-              <p class="card-text">Analyze business data using ChatGPT to identify process bottlenecks and optimization opportunities.</p>
+              <div class="mb-2 text-primary fs-3"><i class="bi bi-cpu"></i></div>
+              <h5 class="card-title fw-bold">AI Business Analysis</h5>
+              <p class="card-text text-muted fs-6">Analyzing business workflows and leveraging generative AI models to identify operational bottlenecks.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <span class="badge bg-secondary">AI & Data</span>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <span class="badge bg-light text-dark border">AI & Analytics</span>
             </div>
           </div>
         </div>
 
+        <!-- Project Card 2 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-sm card-project">
             <div class="card-body">
-              <h5 class="card-title">Data Visualization</h5>
-              <p class="card-text">Interactive performance dashboard built with Tableau to track sales metrics and KPIs.</p>
+              <div class="mb-2 text-primary fs-3"><i class="bi bi-file-earmark-excel"></i></div>
+              <h5 class="card-title fw-bold">Data Analysis & Reporting</h5>
+              <p class="card-text text-muted fs-6">Organizing business metrics in Excel and presenting findings using structured PowerPoint decks.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <span class="badge bg-secondary">Tableau</span>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <span class="badge bg-light text-dark border">Excel & PowerPoint</span>
             </div>
           </div>
         </div>
 
+        <!-- Project Card 3 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-sm card-project">
             <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
-              <p class="card-text">Responsive portfolio website built with HTML5, CSS3, and Bootstrap, hosted on GitHub Pages.</p>
+              <div class="mb-2 text-primary fs-3"><i class="bi bi-code-slash"></i></div>
+              <h5 class="card-title fw-bold">Web Development</h5>
+              <p class="card-text text-muted fs-6">Designing and publishing a fully responsive, mobile-friendly portfolio on GitHub Pages using Bootstrap 5.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <span class="badge bg-secondary">Bootstrap</span>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <span class="badge bg-light text-dark border">HTML / CSS / Bootstrap</span>
             </div>
           </div>
         </div>
 
+        <!-- Project Card 4 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
+          <div class="card h-100 shadow-sm card-project">
             <div class="card-body">
-              <h5 class="card-title">Process Improvement</h5>
-              <p class="card-text">AI-assisted business workflow redesign targeting reductions in operational cycle times.</p>
+              <div class="mb-2 text-primary fs-3"><i class="bi bi-diagram-3"></i></div>
+              <h5 class="card-title fw-bold">Process Optimization</h5>
+              <p class="card-text text-muted fs-6">Mapping current system processes and recommending digital solutions to improve overall efficiency.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
-              <span class="badge bg-secondary">Operations</span>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <span class="badge bg-light text-dark border">Systems Analysis</span>
             </div>
           </div>
         </div>
@@ -140,29 +170,60 @@
       </div>
     </section>
 
-    <!-- Part 5: Resume -->
+    <!-- Resume Section -->
     <section id="resume" class="mb-5 py-3">
-      <h2 class="border-bottom pb-2 mb-3">Resume</h2>
-      <p class="fs-5">Resume coming soon.</p>
+      <h2 class="section-title">Resume</h2>
+      <div class="p-4 bg-white rounded-3 shadow-sm border">
+        <p class="fs-5 mb-2"><strong>Academic & Professional Background</strong></p>
+        <p class="text-muted mb-3">My complete resume outlining relevant coursework, academic achievements, and experience is available upon request.</p>
+        <span class="badge bg-light text-dark border p-2 fs-6"><i class="bi bi-clock me-1"></i> Full PDF Version Coming Soon</span>
+      </div>
     </section>
 
-    <!-- Part 5: Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="mb-5 py-3">
-      <h2 class="border-bottom pb-2 mb-3">Contact</h2>
-      <ul class="list-unstyled fs-5">
-        <li class="mb-2"><strong>GitHub:</strong> <a href="https://github.com/brissialozano" target="_blank">github.com/brissialozano</a></li>
-      </ul>
+      <h2 class="section-title">Connect With Me</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm border d-flex align-items-center h-100">
+            <div class="fs-2 text-primary me-3"><i class="bi bi-envelope"></i></div>
+            <div>
+              <h6 class="mb-0 fw-bold">University Email</h6>
+              <a href="mailto:u1554824@umail.utah.edu" class="text-decoration-none fs-6">u1554824@umail.utah.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm border d-flex align-items-center h-100">
+            <div class="fs-2 text-primary me-3"><i class="bi bi-linkedin"></i></div>
+            <div>
+              <h6 class="mb-0 fw-bold">LinkedIn</h6>
+              <a href="https://linkedin.com/in/brissialozano" target="_blank" class="text-decoration-none fs-6">brissialozano</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="p-3 bg-white rounded-3 shadow-sm border d-flex align-items-center h-100">
+            <div class="fs-2 text-primary me-3"><i class="bi bi-github"></i></div>
+            <div>
+              <h6 class="mb-0 fw-bold">GitHub</h6>
+              <a href="https://github.com/brissialozano" target="_blank" class="text-decoration-none fs-6">brissialozano</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer class="text-center py-4">
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-white-50">
     <div class="container">
-      <p class="mb-0">&copy; 2026 Brissia Lozano. Built for IS 3060.</p>
+      <p class="mb-0">&copy; 2026 Brissia Lozano | Developed for IS 3060</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
